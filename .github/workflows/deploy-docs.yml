@@ -35,24 +35,24 @@ jobs:
           git config --global url."https://github".insteadOf git://github
           git clone https://github.com/sui-base/suibase.git $HOME/suibase
       - name: Run suibase tests
-        run: |        
+        run: |
           $HOME/suibase/scripts/common/__scripts-tests.sh --github
       - name: Generate docs
         run: |
           ln -s $GITHUB_WORKSPACE $HOME/suibase-api-docs
           localnet update --nobinary
           cd $HOME/suibase/rust/helper
+          ./preprocess.sh
           cargo doc -p suibase --no-deps
-          echo "<meta http-equiv=\"refresh\" content=\"0; url=suibase\">" > target/doc/index.html
-          ls target/doc
-          cat target/doc/index.html
+          ./postprocess.sh
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload docs only
-          path: './docs'
+          path: "./docs"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
