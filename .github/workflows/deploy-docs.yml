@@ -42,9 +42,9 @@ jobs:
           ln -s $GITHUB_WORKSPACE $HOME/suibase-api-docs
           localnet update --nobinary
           cd $HOME/suibase/rust/helper
-          ./preprocess.sh
+          $HOME/suibase-api-docs/preprocess.sh
           cargo doc -p suibase --no-deps
-          ./postprocess.sh
+          $HOME/suibase-api-docs/postprocess.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v3

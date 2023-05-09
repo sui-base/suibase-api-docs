@@ -1,1 +1,1 @@
-See https://github.com/sui-base/suibase-api-docs/
+See https://sui-base.github.io/suibase-api-docs/
