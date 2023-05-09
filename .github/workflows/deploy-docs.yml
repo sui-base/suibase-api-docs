@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p $HOME/.local/bin
           echo "$HOME/.local/bin" >> $GITHUB_PATH
-          git config --global url https://github.com/
+          git config --global url."https://github".insteadOf git://github
           git clone https://github.com/sui-base/suibase.git
       - name: Run suibase tests
         run: $HOME/suibase/scripts/common/__scripts-tests.sh --github        
