@@ -34,14 +34,13 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           git config --global url."https://github".insteadOf git://github
           git clone https://github.com/sui-base/suibase.git $HOME/suibase
-          ls $HOME/suibase
       - name: Run suibase tests
-        run: |
-          ls $HOME/suibase
+        run: |        
           $HOME/suibase/scripts/common/__scripts-tests.sh --github
       - name: Generate docs
         run: |
           ln -s $GITHUB_WORKSPACE $HOME/suibase-api-docs
+          localnet update --nobinary
           cd $HOME/suibase/rust/helper
           cargo doc -p suibase --no-deps
           echo "<meta http-equiv=\"refresh\" content=\"0; url=suibase\">" > target/doc/index.html
