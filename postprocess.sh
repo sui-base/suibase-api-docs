@@ -2,7 +2,7 @@
 
 # This is run immediatly after the "cargo doc" command.
 
-SDIR="$HOME/suibase-api-docs/target/doc"
+SDIR="$HOME/suibase/rust/helper/target/doc"
 TDIR="$HOME/suibase-api-docs/docs"
 
 # Verify that the generated target/doc are sane.
