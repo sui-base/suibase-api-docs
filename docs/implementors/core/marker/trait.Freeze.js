@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"suibase":[["impl Freeze for <a class=\"enum\" href=\"suibase/enum.Error.html\" title=\"enum suibase::Error\">Error</a>",1,["suibase::error::Error"]],["impl Freeze for <a class=\"struct\" href=\"suibase/struct.Helper.html\" title=\"struct suibase::Helper\">Helper</a>",1,["suibase::Helper"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

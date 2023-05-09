@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["Error",""]],"struct":[["Helper","A lightweight API to suibase. Multiple instance can be created within the same app."]]};

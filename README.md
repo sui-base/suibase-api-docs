@@ -1,2 +1,1 @@
-# suibase-api-docs
-Hosting of the Rust suibase helper docs
+See https://github.com/sui-base/suibase-api-docs/

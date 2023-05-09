@@ -1,0 +1,10 @@
+[package]
+name = "suibase-api-docs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# It is assumed the suibase to be documented is installed on the system
+suibase = { path = "../suibase/rust/helper" }
