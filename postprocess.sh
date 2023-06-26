@@ -12,6 +12,12 @@ if [ ! -d "$SDIR" ]; then
     exit 1
 fi
 
+# Remove generated .lock, which has permission that was
+# causing github deploy pages to fail. More info:
+#  https://github.com/actions/deploy-pages/issues/188
+#  https://github.com/actions/upload-pages-artifact#file-permissions
+rm -f "$SDIR/.lock"
+
 echo "<meta http-equiv=\"refresh\" content=\"0; url=suibase\">" > "$SDIR/index.html"
 
 if [ ! -f "$SDIR/index.html" ]; then
