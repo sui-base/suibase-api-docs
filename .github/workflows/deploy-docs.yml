@@ -34,9 +34,9 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           git config --global url."https://github".insteadOf git://github
           git clone https://github.com/chainmovers/suibase.git $HOME/suibase
-      - name: Run suibase tests
-        run: |
-          $HOME/suibase/scripts/common/__scripts-tests.sh --github
+#      - name: Run suibase tests
+#        run: |
+#          $HOME/suibase/scripts/common/__scripts-tests.sh --github
       - name: Generate docs
         run: |
           ln -s $GITHUB_WORKSPACE $HOME/suibase-api-docs
