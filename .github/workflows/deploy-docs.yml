@@ -41,7 +41,7 @@ jobs:
       - name: Generate docs
         run: |
           ln -s $GITHUB_WORKSPACE $HOME/suibase-api-docs
-          localnet update --nobinary
+          localnet update
           cd $HOME/suibase/rust/helper
           $HOME/suibase-api-docs/preprocess.sh
           cargo doc -p suibase --no-deps
