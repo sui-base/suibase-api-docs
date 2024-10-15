@@ -3,7 +3,7 @@
 Do '~/suibase/update' to download and update suibase itself to latest.
 Do '<workdir_name> update' when you instead want to update only a local Sui repo to the latest from Mysten Labs. Example: 'localnet update'
 
-Only notable changes are documented here. See github commits for all changes.
+Only notable changes are documented here. See GitHub commits for all changes.
 
 Suibase adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -12,9 +12,14 @@ Suibase adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - New built-in sui explorer (do "localnet status" to see URL). Code from https://github.com/kkomelin/sui-explorer
 - New VSCode extension https://marketplace.visualstudio.com/items?itemName=suibase.suibase
+- (#113) Reduce localnet storage (less checkpoints per secs)
+- (#101) Eliminate rust dependencies (suibase-daemon precompiled for most platforms)
 
 ### Fixed
-- More robust handling of backend ( suibase-daemon )
+- (#112) fix for keytool generate command (.key were created in unexpected location)
+- "lsui/dsui/tsui client faucet" commands now work.
+- More robust handling of backend (suibase-daemon)
+- Reduce localnet storage on regen (delete full_node_db).
 
 ### Changed
 - For better stability, localnet uses Mysten Labs testnet branch (instead of devnet).
@@ -24,7 +29,7 @@ Suibase adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [0.1.6] 2023-11-01
 
 ### Added
-- (#68) Precompiled binaries for MacOS, x86_64 Linux and Windows WSL2.
+- (#68) Precompiled binaries for macOS, x86_64 Linux and Windows WSL2.
 
 ### Fixed
 - (#83) Do sui binaries --locked cargo build for consistency.
@@ -65,7 +70,7 @@ Suibase adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Rust/Python Suibase Helper ( more info: https://suibase.io/helpers )
+- Rust/Python Suibase Helper (more info: https://suibase.io/helpers)
 - Object cookbook
 - MultiSig cookbook entries for Python
 
